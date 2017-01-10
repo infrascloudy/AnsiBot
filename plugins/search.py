@@ -7,6 +7,6 @@ def search(text):
     res_string = ''
     for word in text.split():
         print(word)
-        res_string += word+'+'
+        res_string += word+'%20'
     
-    return 'http://docs.ansible.com/ansible/#stq='+res_string[:-1]
+    return 'http://docs.ansible.com/ansible/#stq='+res_string[:-3]

@@ -1,7 +1,7 @@
 from cloudbot import hook
 
 @hook.command("search", "doc")
-def search(text):
+def search(text, chan, conn, bot, notice, message):
     """ search <text> returns ansible docs url.
     working to include top results"""
     res_string = ''
@@ -9,4 +9,4 @@ def search(text):
         print(word)
         res_string += word+'%20'
     
-    return 'http://docs.ansible.com/ansible/#stq='+res_string[:-3]
+    message('http://docs.ansible.com/ansible/#stq='+res_string[:-3])

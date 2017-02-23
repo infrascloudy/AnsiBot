@@ -9,4 +9,4 @@ def search(text, chan, conn, bot, notice, message):
         print(word)
         res_string += word+'%20'
     
-    message('http://docs.ansible.com/ansible/#stq='+res_string[:-3])
+    return 'http://docs.ansible.com/ansible/#stq='+res_string[:-3]
